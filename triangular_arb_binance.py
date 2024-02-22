@@ -25,7 +25,10 @@ arbitrage_data = []
 item_count = 0
 
 #Bid and ask prices of currency pairs are saved in 2d array. Base currency is represented by
-#rows and quote by columns
+#rows and quote by columns. Once a price change is recieved, all possible currency pairs
+#in the format x->base, base->quote, quote->y are checked to check for a potential arb.
+#The speed of the operation is optimized by the utilization of a dictionnary which stores the 
+#index of each ticker.
 triangle_array_ask = [[-1] * len(single_tickers) for _ in range(len(single_tickers))]
 triangle_array_bid = [[-1] * len(single_tickers) for _ in range(len(single_tickers))]
 
