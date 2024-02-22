@@ -131,9 +131,9 @@ def check_arb_full_on_change(base_curr, quote_curr,ticker1,ticker2,bid_ask = 0,)
             "First_to_Second": f"{ticker1}-{ticker2}",
             "Second_to_Third": f"{ticker2}-{other_leg}",
             "First_to_Third": f"{ticker1}-{other_leg}",
-            "Base_to_Quote": base_to_quote,
-            "Quote_to_Third": quote_to_third,
-            "Base_to_Third": base_to_third,
+            "First_to_Second_Price": base_to_quote,
+            "Second_to_Third_Price": quote_to_third,
+            "First_to_Third_Price": base_to_third,
             "Time":time.time(),
             })
 
